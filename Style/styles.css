@@ -1,0 +1,646 @@
+@import url(reset.css);
+
+:root {
+  --primary: #a3887b;
+  --accent: #ffeddf;
+  --head: #2d3047;
+  --main-text: #556877;
+  --card: #ffffff;
+  --background-light: #fffbf9;
+  --background-dark: #ede7e5;
+  --stroke: #dacfca;
+  --hover: #8c6659;
+}
+
+.span-logo,
+.navigation-element,
+.connection-text,
+.text-about-territory,
+.card-title,
+.room-text,
+.card-rest-text,
+.rooms-card-text,
+.rooms-card-text-with-number {
+  font-family: "Wix Madefor Text", sans-serif;
+}
+
+.nomber-phone,
+.main-text,
+.main-h1,
+.see-infrastructure,
+.card-text,
+.room-title,
+.first-type-nomber-1,
+.first-type-text,
+.first-type-nomber-2,
+.second-type-text,
+.title-active-rest,
+.title-passive-rest,
+.card-rest-metrs,
+.info-about-rooms-title,
+.rooms-card-title,
+.rooms-card-title-number {
+  font-family: "Alumni Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  display: flex;
+  background-color: var(--background-light);
+  justify-content: space-between;
+}
+
+.container {
+  padding: 0 375px 0 375px;
+}
+
+.span-logo {
+  font-weight: 800;
+
+  line-height: 1.2;
+  color: var(--head);
+
+  font-size: calc((100vw - 320px) / (1920 - 320) * (18 - 12) + 12px);
+}
+
+.span-logo-top {
+  margin-top: 18px;
+}
+
+.navigation {
+  display: flex;
+  gap: 40px;
+  padding: 29px 60px 29px 72px;
+}
+
+.navigation-element {
+  font-weight: 400;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (16 - 14) + 14px);
+
+  line-height: 1.4;
+  color: var(--main-text);
+}
+
+.navigation-element:hover {
+  transform: scale(1.25);
+  color: var(--hover);
+}
+
+.connection {
+  padding: 13px 0 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nomber-phone {
+  font-weight: 700;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (30 - 25) + 25px);
+  line-height: 1.1;
+  text-align: right;
+  color: var(--head);
+  display: inline-block;
+}
+
+.connection-text {
+  font-weight: 500;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (14 - 10) + 10px);
+
+  line-height: 1.3;
+  text-align: right;
+  color: var(--primary);
+  display: inline-block;
+}
+
+.main-section {
+  display: flex;
+
+  justify-content: space-between;
+
+  background: var(--background-light);
+}
+
+.main-section-text {
+  display: flex;
+  flex-direction: column;
+  width: 875px;
+}
+
+.main-text {
+  font-weight: 700;
+
+  font-size: calc((100vw - 320px) / (1920 - 320) * (30 - 15) + 15px);
+
+  line-height: 1.1;
+  color: var(--head);
+  display: inline-block;
+
+  padding: 120px 223px 87px 425px;
+  z-index: 1;
+  position: relative;
+}
+
+.main-text::before {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-color: var(--stroke);
+  z-index: -1;
+
+  position: absolute;
+  transform: translate(-57%, -8%);
+}
+
+.main-text::after {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary);
+  z-index: -1;
+  border-radius: 100%;
+  position: absolute;
+  transform: translate(-350%, -50%);
+  clip-path: inset(0 0 0 80%);
+}
+
+.main-h1 {
+  font-weight: 700;
+
+  font-size: calc((100vw - 320px) / (1920 - 320) * (100 - 50) + 50px);
+
+  line-height: 0.9;
+  color: var(--head);
+  margin-left: 375px;
+  padding-bottom: 60px;
+
+  width: 500px;
+  height: 255px;
+}
+
+.section-photo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper-photo {
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper-photo::before {
+  content: "";
+  display: inline-block;
+  width: 640px;
+  height: 495px;
+  background-color: var(--background-dark);
+  z-index: -1;
+
+  position: absolute;
+  transform: translate(-7%, 73%);
+}
+
+.building {
+  margin-right: 318px;
+  border: 25px solid #fff;
+  border-radius: 1px;
+}
+
+.see-plane {
+  border-radius: 1px;
+
+  width: 252px;
+  height: 60px;
+  color: var(--card);
+  background: var(--primary);
+  margin: 75px 318px 190px 375px;
+}
+
+.see-plane:hover {
+  scale: 1.2;
+  background-color: var(--hover);
+}
+
+.see-infrastructure {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.3;
+  color: var(--primary);
+  margin: 42px 0px 30px 261px;
+  z-index: 2;
+
+  background-image: url("/assets/Arrow_Right_LG.png");
+  background-repeat: no-repeat;
+
+  background-position-x: 95%;
+  background-position-y: 91%;
+
+  position: relative;
+
+  width: 300px;
+  height: 31px;
+}
+
+.see-infrastructure:hover {
+  transform: scale(1.25);
+  color: var(--hover);
+}
+
+.see-infrastructure::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 537px;
+  background-color: var(--primary);
+  transform: translate(-55%, 50px);
+  pointer-events: none;
+}
+
+.swiper-slide-second-photo {
+  place-content: center;
+}
+
+.button-room-nov {
+  position: fixed;
+  border-radius: 1px;
+  padding: 19px 40px;
+  width: 239px;
+  height: 60px;
+  background-color: var(--primary);
+  font-family: "Wix Madefor Text", sans-serif;
+  font-weight: 500;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (16 - 12) + 12px);
+
+  line-height: 1.4;
+  color: var(--card);
+  z-index: 100;
+  cursor: pointer;
+  bottom: 20px;
+  right: 64px;
+}
+
+.button-room-nov:hover {
+  scale: 1.2;
+  background-color: var(--hover);
+}
+
+.about-house-part1 {
+  display: flex;
+}
+
+.img-territory {
+  padding: 80px 130px 60px 375px;
+}
+
+.about-house-text {
+  width: 570px;
+}
+
+.about-house-text > h2 {
+  padding: 80px 382px 40px 0;
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 1;
+  color: var(--head);
+}
+
+.text-about-territory {
+  padding-bottom: 20px;
+
+  font-weight: 400;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (18 - 14) + 14px);
+
+  line-height: 1.4;
+  color: var(--primary);
+}
+
+.about-house-card {
+  display: flex;
+  gap: 30px;
+  padding: 0 383px 81px 367px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 270px;
+  justify-content: space-around;
+
+  border: var(--stroke) 1px solid;
+}
+
+.card-title {
+  font-weight: 400;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (18 - 14) + 14px);
+
+  line-height: 1.4;
+  text-align: center;
+  color: var(--main-text);
+  display: inline-block;
+}
+
+.card-text {
+  font-weight: 700;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (80 - 50) + 50px);
+
+  line-height: 1;
+  text-align: center;
+  color: var(--primary);
+  display: inline-block;
+}
+
+.first-text-card {
+  font-size: calc((100vw - 320px) / (1920 - 320) * (30 - 10) + 10px);
+}
+
+.room {
+  display: flex;
+
+  gap: 90px;
+  justify-content: center;
+  padding-top: 60px;
+  background: var(--background-light);
+  padding-bottom: 70px;
+}
+
+.room-title {
+  font-weight: 700;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (80 - 50) + 50px);
+
+  line-height: 1;
+  color: var(--head);
+
+  width: 500px;
+  height: 160px;
+}
+
+.first-type {
+  border: 1px solid var(--primary);
+  /* border-radius: 1px; */
+  width: 470px;
+  height: 111px;
+  background: var(--background-light);
+
+  margin: 40px 0 10px;
+  display: flex;
+
+  padding: 36px 140px 36px 81px;
+}
+
+.first-type-nomber-1 {
+  font-weight: 700;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (46 - 25) + 25px);
+
+  line-height: 1.1;
+  color: var(--primary);
+  display: inline-block;
+  transform: translate(-21px, -8px);
+
+  position: relative;
+  z-index: 1;
+}
+
+.first-type-nomber-1::before {
+  content: "";
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  background-color: var(--background-dark);
+  z-index: -1;
+  transform: translate(-62%, -1%);
+}
+
+.first-type-text {
+  font-weight: 700;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (30 - 10) + 10px);
+
+  line-height: 1.3;
+  color: var(--head);
+}
+
+.second-type {
+  border: 1px solid var(--stroke);
+  /* border-radius: 1px; */
+  width: 470px;
+  height: 111px;
+  background: var(--background-light);
+
+  display: flex;
+  padding: 36px 125px 36px 80px;
+}
+
+.first-type-nomber-2 {
+  font-weight: 700;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (46 - 25) + 25px);
+
+  line-height: 1.1;
+  color: var(--stroke);
+  display: inline-block;
+  transform: translate(-21px, -8px);
+  position: relative;
+  z-index: 1;
+}
+
+.first-type-nomber-2::before {
+  content: "";
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  background-color: var(--background-dark);
+  z-index: -1;
+  transform: translate(-67%, -1%);
+}
+
+.second-type-text {
+  font-weight: 700;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (30 - 10) + 10px);
+
+  line-height: 1.3;
+  color: var(--stroke);
+}
+
+.room-text {
+  font-weight: 400;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (18 - 14) + 14px);
+
+  line-height: 1.4;
+  text-align: center;
+  color: var(--main-text);
+
+  width: 470px;
+  height: 75px;
+
+  margin: 40px 0 10px;
+}
+
+.room-card {
+  display: flex;
+  gap: 60px;
+}
+
+.card-rest {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 147px;
+}
+
+.title-active-rest,
+.title-passive-rest {
+  font-weight: 700;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (24 - 18) + 18px);
+
+  line-height: 1.3;
+  color: var(--head);
+}
+
+.card-rest-metrs {
+  font-weight: 700;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (46 - 25) + 25px);
+
+  line-height: 1.1;
+  color: var(--primary);
+  margin-top: 15px;
+}
+
+.card-rest-text {
+  font-weight: 400;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (18 - 14) + 14px);
+
+  line-height: 1.4;
+  color: var(--main-text);
+}
+
+.info-about-rooms-title {
+  font-weight: 700;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (80 - 50) + 50px);
+
+  line-height: 1;
+  text-align: center;
+  color: var(--head);
+  padding-top: 60px;
+}
+
+.cards-rooms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px 360px 0 375px;
+}
+
+.card-rooms {
+  width: 270px;
+  height: 270px;
+  padding: 30px 30px 30px 30px;
+  border: var(--stroke) 1px solid;
+}
+
+.rooms-card-title {
+  font-weight: 700;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (24 - 18) + 18px);
+
+  line-height: 1.3;
+  color: var(--head);
+}
+
+.rooms-card-text {
+  font-weight: 400;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (18 - 14) + 14px);
+
+  line-height: 1.4;
+  color: var(--main-text);
+}
+
+.rooms-card-img {
+  width: 60px;
+  height: 60px;
+  transform: translate(240%, 54%);
+}
+
+.rooms-card-img-two-level {
+  transform: translate(240%, 5%);
+}
+
+.rooms-card-title-number {
+  font-weight: 700;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (30 - 10) + 10px);
+
+  line-height: 1.3;
+  color: var(--primary);
+}
+
+.rooms-card-text-with-number {
+  font-weight: 400;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (18 - 14) + 14px);
+
+  line-height: 1.4;
+  color: var(--main-text);
+  padding-top: 121px;
+}
+
+@media screen and (max-width: 1440px) {
+  .header {
+    padding: 0 150px 0 150px;
+  }
+
+  .navigation {
+    padding: 29px 56px 29px 56px;
+  }
+
+  .main-text {
+    padding: 120px 0 87px 194px;
+    width: 387px;
+  }
+
+  .main-text::before {
+    transform: translate(-57%, -15%);
+  }
+
+  .main-text::after {
+    transform: translate(-318%, -50%);
+  }
+
+  .main-h1 {
+    margin-left: 142px;
+  }
+
+  .see-plane {
+    margin: 76px 216px 190px 146px;
+  }
+
+  .main-section-text {
+    width: 836px;
+  }
+
+  .button-room-nov {
+    transform: translate(33%, -6%);
+    padding: 8px 14px;
+    width: 112px;
+    height: 52px;
+  }
+
+  .see-infrastructure::before {
+    width: 480px;
+    transform: translate(-50%, 50px);
+  }
+
+  .img-territory {
+    padding: 80px 130px 60px 140px;
+  }
+
+  .about-house-card {
+    padding: 0 113px 81px 136px;
+  }
+
+  .cards-rooms {
+    margin: 40px 130px 0 120px;
+  }
+}
